@@ -1,0 +1,11 @@
+src/
+test/
+scripts/
+*.test.ts
+tsconfig.json
+tsup.config.ts
+jest.config.js
+.prettierrc
+.eslintrc
+.gitignore
+.trae/
