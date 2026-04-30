@@ -1,6 +1,6 @@
 {
     "name": "@js-tiny/tree-walker",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "A zero-dependency, lazy tree traversal utility for JavaScript and TypeScript.",
     "keywords": [
         "tree",
