@@ -1,0 +1,68 @@
+{
+    "name": "@js-tiny/tree-walker",
+    "version": "0.0.1",
+    "description": "A zero-dependency, lazy tree traversal utility for JavaScript and TypeScript.",
+    "keywords": [
+        "tree",
+        "walker",
+        "traversal",
+        "dfs",
+        "bfs",
+        "iterator"
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "miniprogram": "dist/miniprogram",
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    },
+    "directories": {
+        "src": "src",
+        "test": "test"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "format": "prettier --write ./src ./test",
+        "prepublishOnly": "npm run clean && npm run build",
+        "build": "pnpm clean & tsup",
+        "dev": "tsup --watch",
+        "clean": "rimraf dist",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "release": "./scripts/publish.sh"
+    },
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.2.1",
+        "jest": "^30.0.5",
+        "prettier": "^3.6.2",
+        "semver": "^7.7.0",
+        "ts-jest": "^29.4.1",
+        "typescript": "^5.9.2",
+        "rimraf": "latest",
+        "tsup": "^8.5.0"
+    },
+    "author": "xesam <xesam@outlook.com>",
+    "homepage": "https://github.com/xesam/js-tiny-tree-walker#readme",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xesam/js-tiny-collections.git"
+    },
+    "bugs": {
+        "url": "https://github.com/xesam/js-tiny-collections/issues"
+    }
+}
